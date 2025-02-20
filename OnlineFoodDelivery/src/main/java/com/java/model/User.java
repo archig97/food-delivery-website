@@ -30,7 +30,7 @@ public class User {
     private List<Order> orders = new ArrayList<>();
 
     @ElementCollection
-    private List<RestaurantDto> favorites = new ArrayList<>();
+    private List<Long> favoriteRestaurantIds = new ArrayList<>();
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)//when we delete user, all address info automatically deleted
     private List<Address> addresses = new ArrayList<>();
     private String status;
